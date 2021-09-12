@@ -1,0 +1,10 @@
+<h1>Žmonių sąrašas</h1>
+<a href="/zmogusEdit">Naujas</a>
+<ul>
+  {{#each zmones}}
+  <li>
+    <a href="/zmogusEdit?id={{id}}">{{vardas}} {{pavarde}}</a> {{alga}}
+    <a href="/zmogusDelete?id={{id}}">X</a>
+  </li>
+  {{/each}}
+</ul>

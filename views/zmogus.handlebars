@@ -1,0 +1,15 @@
+{{#if zmogus}}
+<h1>Keičiam žmogų</h1>
+{{else}}
+<h1>Naujas žmogus</h1>
+{{/if}}
+<form action="/zmogusSave" method="POST">
+  {{#if zmogus}}
+  <input type="hidden" name="id" value="{{zmogus.id}}"><br>
+  {{/if}}
+  Vardas: <input type="text" name="vardas" value="{{#if zmogus}}{{zmogus.vardas}}{{/if}}"><br>
+  Pavarde: <input type="text" name="pavarde" value="{{#if zmogus}}{{zmogus.pavarde}}{{/if}}"><br>
+  Alga: <input type="text" name="alga" value="{{#if zmogus}}{{zmogus.alga}}{{/if}}"><br>
+  <input type="submit" value="Save"><br>
+</form>
+<a href="/zmones">Atgal</a>

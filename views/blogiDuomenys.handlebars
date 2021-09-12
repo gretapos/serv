@@ -1,0 +1,7 @@
+<h1>Blogi duomenys</h1>
+<ul>
+  {{#each klaidos}}
+  <li><b>{{this}}</b></li>
+  {{/each}}
+</ul>
+<a href="/zmogusEdit{{#if zmogus}}/?id={{zmogus.id}}{{/if}}">Atgal</a>
