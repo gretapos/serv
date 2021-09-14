@@ -129,6 +129,18 @@ app.post("/json/zmones", (req, res) => {
   res.status(204).end();
 });
 
+app.put("/json/zmones", (req, res) => {
+  const zmogus = zmones.find(z => z.id === req.body.id);
+  if (zmogus) {
+    zmogus.vardas = req.body.vardas,
+    zmogus.pavarde = req.body.pavarde;
+    zmogus.alga = req.body.alga;
+    res.status(204).end();
+  } else {
+    res.status(404).end();
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
 });
